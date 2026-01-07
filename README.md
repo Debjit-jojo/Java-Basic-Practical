@@ -32,3 +32,4 @@ MyAccount ma= new MyAccount();
 System.out.println("balance"+ma.balance);
 }
 }
+
