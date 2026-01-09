@@ -1,4 +1,6 @@
 # Java-Basic-Practical 
+This are the basic code for Learning the basic function of class and identifiers of the java script
+
 **1. Basic code for storing the Detail of a person**
 class person{
 String name;
