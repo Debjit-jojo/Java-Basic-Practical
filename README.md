@@ -1,5 +1,5 @@
 # Java-Basic-Practical 
-This are the basic code for Learning the basic function of class and identifiers of the java script
+This are the basic code for Learning the basic use of java for developing a project.
 
 **1. Basic code for storing the Detail of a person**
 class person{
