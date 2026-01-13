@@ -21,19 +21,73 @@ System.out.println("p2.age="+p2.age);
 }
 }
 
-**2.Basic code for storing Details of Bank**
+**2.Basic code for controling the data of Bank**
 
-class MyAccount{
-int accNo;
-double balance;
-MyAccount(){
+package q540;
+
+import java.util.Scanner;
+
+class Account {
+    int acc_no;
+    String name;
+    double balance;
+
+    Account(int acc_no, String name, double balance) {
+        this.acc_no = acc_no;
+        this.name = name;
+        this.balance = balance;
+    }
+
+    String deposit(double amount) {
+        if (amount <= 0) {
+            return "Invalid Deposit Amount";
+        }
+        balance += amount;
+        return "Deposit Successful";
+    }
+
+    String withdraw(double amount) {
+        if (amount <= 0) {
+            return "Invalid Withdraw Amount";
+        }
+        if (amount > balance) {
+            return "Insufficient Balance";
+        }
+        balance -= amount;
+        return "Withdraw Successful";
+    }
+
+    double getBalance() {
+        return balance;
+    }
 }
-}
-class MyBank{
-public static void main(String[] args){
-MyAccount ma= new MyAccount();
-System.out.println("balance"+ma.balance);
-}
+
+public class Practical1 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        // Create one account with opening balance of 5000
+        Account acc = new Account(101, "Rahul", 5000);
+
+        // Program expects exactly 5 operations
+        for (int i = 1; i <= 5; i++) {
+            int choice = sc.nextInt();      // 1 for deposit, 2 for withdraw
+            double amount = sc.nextDouble();
+            String result = "";
+
+            if (choice == 1) {
+                result = acc.deposit(amount);
+            } else if (choice == 2) {
+                result = acc.withdraw(amount);
+            } else {
+                result = "Invalid Choice";
+            }
+
+            System.out.println(result + " | Balance: " + acc.getBalance());
+        }
+
+        sc.close();
+    }
 }
 
 **3. Basic code for calculating area of rectangle Box**
