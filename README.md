@@ -119,7 +119,7 @@ System.out.println("Volume is"+ vol);
 }
 
 
-**4. Basic code to store a data of a Car in a Garage**
+**4. Basic code for storing a data of a Car in a Garage**
 
 package q542;
 import java.util.Scanner;
