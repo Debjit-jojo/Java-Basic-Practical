@@ -21,10 +21,10 @@ System.out.println("p2.age="+p2.age);
 }
 }
 
+
 **2.Basic code for controling the data of Bank**
 
 package q540;
-
 import java.util.Scanner;
 
 class Account {
@@ -89,6 +89,7 @@ public class Practical1 {
         sc.close();
     }
 }
+
 
 **3. Basic code for calculating area of rectangle Box**
 
