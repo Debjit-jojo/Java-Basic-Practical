@@ -182,7 +182,7 @@ public class Practical2 {
     }
 }
 
-
+5. Basic code for storing the information of an employee 
 
 package q546;
 
