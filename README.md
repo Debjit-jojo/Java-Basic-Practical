@@ -184,4 +184,68 @@ public class Practical2 {
 
 
 
+package q546;
+
+import java.util.Scanner;
+
+// Type Content here...
+class Person {
+    protected String firstName;
+    protected String lastName;
+
+    Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+}
+
+class Employee extends Person {
+    private String employeeId;
+    private String title;
+
+    Employee(String firstName, String lastName, String employeeId, String title) {
+        super(firstName, lastName);
+        this.employeeId = employeeId;
+        this.title = title;
+    }
+
+    @Override
+    public String getLastName() {
+        return lastName + " (" + title + ")";
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+}
+
+public class Practical3 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String firstName = sc.nextLine();
+        String lastName = sc.nextLine();
+        String empId = sc.nextLine();
+        String title = sc.nextLine();
+
+        Employee emp = new Employee(firstName, lastName, empId, title);
+
+        System.out.println("First Name: " + emp.getFirstName());
+        System.out.println("Last Name: " + emp.getLastName());
+        System.out.println("Employee ID: " + emp.getEmployeeId());
+
+        sc.close();
+    }
+}
+
+
 
