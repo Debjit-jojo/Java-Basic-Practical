@@ -1,6 +1,12 @@
 # Java-Basic-Practical 
 **This are the basic code for Learning the basic use of java for developing a project.**
 
+Java is a popular, high-level, object-oriented programming language and computing platform known for its 
+"Write Once, Run Anywhere" (WORA) capability, allowing code to run on any device with a Java Virtual Machine (JVM). 
+Developed by Sun Microsystems, it's used for web apps, Android apps, enterprise software, and more, offering security, speed, and
+platform independence, with syntax similar to C++. 
+
+
 **1. Basic code for storing the Detail of a person**
 class person{
 String name;
