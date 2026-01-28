@@ -188,8 +188,8 @@ public class Practical2 {
     }
 }
 
-5. Basic code for storing the information of an employee 
-
+**5.Basic code for storing the information of an employee**
+   
 package q546;
 
 import java.util.Scanner;
@@ -252,6 +252,10 @@ public class Practical3 {
         sc.close();
     }
 }
+
+
+
+
 
 
 
