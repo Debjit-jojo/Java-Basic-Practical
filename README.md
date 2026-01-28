@@ -1,5 +1,5 @@
 # Java-Basic-Practical 
-**This are the basic code for Learning the basic use of java for developing a project.**
+# This are the basic code for Learning the basic use of java for developing a project.**
 
 Java is a popular, high-level, object-oriented programming language and computing platform known for its 
 "Write Once, Run Anywhere" (WORA) capability, allowing code to run on any device with a Java Virtual Machine (JVM). 
@@ -7,7 +7,7 @@ Developed by Sun Microsystems, it's used for web apps, Android apps, enterprise 
 platform independence, with syntax similar to C++. 
 
 
-**1. Basic code for storing the Detail of a person**
+# 1. Basic code for storing the Detail of a person
 class person{
 String name;
 int age;
@@ -28,7 +28,7 @@ System.out.println("p2.age="+p2.age);
 }
 
 
-**2.Basic code for controling the data of Bank**
+# 2.Basic code for controling the data of Bank
 
 package q540;
 import java.util.Scanner;
@@ -97,7 +97,7 @@ public class Practical1 {
 }
 
 
-**3. Basic code for calculating area of rectangle Box**
+# 3. Basic code for calculating area of rectangle Box
 
 class Box{
 double width;
@@ -126,7 +126,7 @@ System.out.println("Volume is"+ vol);
 }
 
 
-**4. Basic code for storing a data of a Car in a Garage**
+# 4. Basic code for storing a data of a Car in a Garage
 
 package q542;
 import java.util.Scanner;
@@ -188,7 +188,7 @@ public class Practical2 {
     }
 }
 
-**5.Basic code for storing the information of an employee**
+# 5.Basic code for storing the information of an employee
    
 package q546;
 
