@@ -1,5 +1,5 @@
 # Java-Basic-Practical 
-# This are the basic code for Learning the basic use of java for developing a project.**
+# This are the basic code for Learning the basic use of java for developing a project.
 
 Java is a popular, high-level, object-oriented programming language and computing platform known for its 
 "Write Once, Run Anywhere" (WORA) capability, allowing code to run on any device with a Java Virtual Machine (JVM). 
