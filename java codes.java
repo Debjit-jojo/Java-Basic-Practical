@@ -244,4 +244,5 @@ class AbstractDemo {
         obj.callmetoo();
     }
 }
+
 ```
