@@ -259,6 +259,29 @@ public class Practical3 {
     }
 }
 
+# 6 
+import java.util.*;
+
+class Rectangle {
+    static float height;
+    static float width;
+
+    static void calArea() {
+        System.out.println("Area=" + height * width);
+    }
+}
+
+class MyRectangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter height:");
+        Rectangle.height = sc.nextFloat();
+        System.out.print("enter width:");
+        Rectangle.width = sc.nextFloat();
+
+    }
+}
+
 
 
 
