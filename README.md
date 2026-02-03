@@ -1,4 +1,4 @@
-# Java-Basic-Practical 
+# Java-Basic-Practicl
 # This are the basic code for Learning the basic use of java for developing a project.
 
 Java is a popular, high-level, object-oriented programming language and computing platform known for its 
