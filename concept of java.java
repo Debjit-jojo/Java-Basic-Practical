@@ -172,3 +172,4 @@ class MyRectangle {
         System.out.print("enter width:");
         Rectangle.width = sc.nextFloat();
 
+
