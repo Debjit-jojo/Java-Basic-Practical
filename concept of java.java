@@ -152,7 +152,7 @@ class Account {
 
 ## 6 Static Method – Rectangle Area
 
-```java
+
 import java.util.*;
 
 class Rectangle {
@@ -174,6 +174,7 @@ class MyRectangle {
 
     }
 }
+
 
 
 
