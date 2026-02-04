@@ -37,9 +37,7 @@ class CubeInherit {
         System.out.println("cw2.volume()=" + cw2.volume());
     }
 }
-```
 
----
 
 ## 2. Super Keyword – Calling Superclass Constructor
 
@@ -268,6 +266,7 @@ class MyRectangle {
 
     }
 }
+
 
 
 
