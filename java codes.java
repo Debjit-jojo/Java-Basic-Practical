@@ -1,4 +1,4 @@
-# Basic Codes of java   
+# Basic Codes of java
 
 
 ## 1. Derived Class with Constructor
@@ -266,6 +266,7 @@ class MyRectangle {
 
     }
 }
+
 
 
 
