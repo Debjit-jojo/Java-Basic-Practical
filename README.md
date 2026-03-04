@@ -7,7 +7,7 @@ Developed by Sun Microsystems, it's used for web apps, Android apps, enterprise 
 platform independence, with syntax similar to C++. 
 
 
-# 1. Basic code for storing the Detail of a person
+# 1. Basic code for storing the Detail of a person.
 
 class Person {
     String name;
