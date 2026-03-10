@@ -131,7 +131,7 @@ class Balance {
     }
 
     Balance(int a, double b) {
-        System.out.println("inside const3");
+        System.out.println("inside const3")
         bal = b;
         accNo = a;
     }
@@ -174,6 +174,7 @@ class MyRectangle {
 
     }
 }
+
 
 
 
