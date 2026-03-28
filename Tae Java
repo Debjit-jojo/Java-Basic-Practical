@@ -1,0 +1,113 @@
+import java.util.*;
+import java.io.*;
+
+// 11. ATM Withdrawal System
+class ATMWithdrawal {
+    void withdraw(double balance, double amount) {
+        try {
+            if (amount > balance) {
+                throw new Exception("Insufficient Balance");
+            } else {
+                balance -= amount;
+                System.out.println("Withdrawal successful. Remaining balance: " + balance);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+// 12. Online Division Calculator
+class DivisionCalculator {
+    void divide(int a, int b) {
+        try {
+            int result = a / b;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
+
+// 13. Student Input System
+class StudentInputSystem {
+    void getAge() {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.print("Enter student age: ");
+            int age = sc.nextInt();
+            System.out.println("Student age is: " + age);
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input");
+        } catch (ArithmeticException e) {
+            System.out.println("Invalid input");
+        }
+    }
+}
+
+// 14. File Processing System
+class FileProcessingSystem {
+    void readFile() {
+        try {
+            System.out.println("Reading file...");
+            // Simulating file reading
+        } catch (Exception e) {
+            System.out.println("Error reading file");
+        } finally {
+            System.out.println("Closing file resources");
+        }
+    }
+}
+
+// 15. Bank Application
+class BankApplication {
+    void processTransaction() throws Exception {
+        // Simulate condition
+        boolean error = false;
+        if (error) {
+            throw new Exception("Transaction Failed");
+        } else {
+            System.out.println("Transaction processed");
+        }
+    }
+}
+
+// Main class to run all
+public class MainProgram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // ATM Withdrawal
+        ATMWithdrawal atm = new ATMWithdrawal();
+        System.out.print("Enter balance: ");
+        double balance = sc.nextDouble();
+        System.out.print("Enter withdrawal amount: ");
+        double amount = sc.nextDouble();
+        atm.withdraw(balance, amount);
+
+        // Division Calculator
+        DivisionCalculator dc = new DivisionCalculator();
+        System.out.print("Enter two integers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        dc.divide(a, b);
+
+        // Student Input
+        StudentInputSystem sis = new StudentInputSystem();
+        sis.getAge();
+
+        // File Processing
+        FileProcessingSystem fps = new FileProcessingSystem();
+        fps.readFile();
+
+        // Bank Application
+        BankApplication bank = new BankApplication();
+        try {
+            bank.processTransaction();
+        } catch (Exception e) {
+            System.out.println("Exception handled in main");
+        }
+
+        sc.close();
+    }
+}
