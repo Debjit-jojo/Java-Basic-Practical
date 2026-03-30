@@ -1,0 +1,117 @@
+// Multi-threading Applications in One Program
+
+class MusicPlayer extends Thread {
+    public void run() {
+        try {
+            System.out.println("Playing song...");
+            for (int i = 1; i <= 3; i++) {
+                Thread.sleep(1000);
+                System.out.println("Progress " + i);
+            }
+        } catch (Exception e) {}
+    }
+}
+
+class DownloadManager implements Runnable {
+    String file;
+    DownloadManager(String file) {
+        this.file = file;
+    }
+    public void run() {
+        System.out.println("Downloading " + file);
+    }
+}
+
+class RailwayReservation {
+    int tickets = 1;
+
+    synchronized void bookTicket(String name) {
+        if (tickets > 0) {
+            System.out.println(name + ": Ticket booked successfully");
+            tickets--;
+        } else {
+            System.out.println(name + ": No tickets available");
+        }
+    }
+}
+
+class OnlineShoppingSystem {
+    void processOrder() {
+        Thread payment = new Thread(() -> {
+            System.out.println("Processing payment...");
+        });
+
+        Thread order = new Thread(() -> {
+            System.out.println("Order confirmed...");
+        });
+
+        payment.start();
+        try { payment.join(); } catch (Exception e) {}
+        order.start();
+    }
+}
+
+class ThreadPrioritySystem extends Thread {
+    public void run() {
+        System.out.println("Thread " + Thread.currentThread().getName() +
+                " with priority " + Thread.currentThread().getPriority());
+    }
+}
+
+class Restaurant {
+    boolean foodReady = false;
+
+    synchronized void prepareFood() {
+        System.out.println("Chef prepared food");
+        foodReady = true;
+        notify();
+    }
+
+    synchronized void serveFood() {
+        while (!foodReady) {
+            try { wait(); } catch (Exception e) {}
+        }
+        System.out.println("Waiter served food");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // 1. Music Player
+        MusicPlayer mp = new MusicPlayer();
+        mp.start();
+
+        // 2. Download Manager
+        Thread d1 = new Thread(new DownloadManager("File1"));
+        Thread d2 = new Thread(new DownloadManager("File2"));
+        d1.start();
+        d2.start();
+
+        // 3. Railway Reservation
+        RailwayReservation rr = new RailwayReservation();
+        Thread r1 = new Thread(() -> rr.bookTicket("User1"));
+        Thread r2 = new Thread(() -> rr.bookTicket("User2"));
+        r1.start();
+        r2.start();
+
+        // 4. Online Shopping
+        OnlineShoppingSystem oss = new OnlineShoppingSystem();
+        oss.processOrder();
+
+        // 5. Thread Priority
+        ThreadPrioritySystem t1 = new ThreadPrioritySystem();
+        ThreadPrioritySystem t2 = new ThreadPrioritySystem();
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
+        t1.start();
+        t2.start();
+
+        // 6. Producer-Consumer (Restaurant)
+        Restaurant res = new Restaurant();
+        Thread chef = new Thread(() -> res.prepareFood());
+        Thread waiter = new Thread(() -> res.serveFood());
+        waiter.start();
+        chef.start();
+    }
+}
