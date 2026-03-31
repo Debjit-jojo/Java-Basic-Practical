@@ -3,7 +3,7 @@ class Restaurant {
     private boolean foodReady = false;
 
     public synchronized void prepareFood() {
-        try {
+        trr {
             while (foodReady)
                 wait();
             System.out.println("Chef prepared food");
