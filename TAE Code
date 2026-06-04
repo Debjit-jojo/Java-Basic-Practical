@@ -1,4 +1,4 @@
-// Multi-threading Applications in One Program
+// Multi-threading Applications in One PrograM
 
 class MusicPlayer extends Thread {
     public void run() {
