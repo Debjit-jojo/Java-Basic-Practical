@@ -2,7 +2,7 @@
 class Restaurant {
     private boolean foodReady = false;
 
-    public synchronized void prepareFood() {
+    public synchronized void prepareFood(){
         trr {
             while (foodReady)
                 wait();
