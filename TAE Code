@@ -7,7 +7,7 @@ class MusicPlayer extends Thread {
 
             for (int i = 1; i <= 3; i++) {
                 Thread.sleep(1000);
-                System.out.println("Progress " + i);
+                System.out.println("Progress " + i)
             }
         } catch (Exception e) {}
     }
