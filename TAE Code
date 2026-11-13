@@ -13,7 +13,7 @@ class MusicPlayer extends Thread {
     }
 }
 
-class DownloadManager implements Runnable {
+class DownloadManager implements Runnable{
     String file;
     DownloadManager(String file) {
         this.file = file;
