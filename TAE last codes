@@ -1,7 +1,6 @@
 // 21. Producer Consumer System (Restaurant)
 class Restaurant {
     private boolean foodReady = false;
-
     public synchronized void prepareFood(){
         trr {
             while (foodReady)
